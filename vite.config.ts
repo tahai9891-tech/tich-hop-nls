@@ -21,3 +21,14 @@ export default defineConfig(({ mode }) => {
       }
     };
 });
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite'; // Bổ sung dòng import này
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(), // Gọi plugin vào mảng này
+  ],
+  // ... giữ nguyên các cấu hình cũ của bạn ở bên dưới (như server, alias, define...)
+});
